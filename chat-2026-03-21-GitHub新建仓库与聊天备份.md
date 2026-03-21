@@ -65,20 +65,22 @@
 
 ---
 
-## 8）助手：已写入本文件；你只需在终端推送（若未自动推送）
+## 8）助手：已写入本文件并完成推送
 
 助手回复要点：
 
-- 已将**截至本条之前**的本对话整理为本文，路径：`~/chat-backup/chat-2026-03-21-GitHub新建仓库与聊天备份.md`（与 `chat-2026-03-18.md` 等同仓库）。
-- **你需要做的**：在本机终端执行下面命令（若助手侧未能自动 `push`，由你完成最后一步即可）：
+- 已将**截至第 7 节之前**的本对话整理为本文，路径：`~/chat-backup/chat-2026-03-21-GitHub新建仓库与聊天备份.md`（与 [chat-2026-03-18.md](https://github.com/weic23614-coder/chat-backup/blob/main/chat-2026-03-18.md) 同一仓库 [weic23614-coder/chat-backup](https://github.com/weic23614-coder/chat-backup)）。
+- **本次已由助手执行**：`git add` → `git commit` → `git push origin main`，远程已更新。
+
+**你以后若要自己再备份一轮**，在终端执行：
 
 ```bash
 cd ~/chat-backup
-git add chat-2026-03-21-GitHub新建仓库与聊天备份.md
-git status
-git commit -m "备份 2026-03-21 对话（GitHub 与聊天备份）"
-git push -u origin main
+# 编辑或新增 markdown 后：
+git add .
+git commit -m "备份：简述本次内容"
+git push
 ```
 
 - 若 `git push` 要求登录：使用 **Personal Access Token**（或已配置的 SSH），不要用 GitHub 账户密码。
-- **本条助手回复发出后**若还有新消息，可把新内容追加到本文件末尾或再建一日志文件后再次 `commit` / `push`。
+- **本条之后的新消息**若要进仓库：把内容追加到本文件（或新建 `chat-YYYY-MM-DD-主题.md`）后再执行上面的 `add` / `commit` / `push`。
